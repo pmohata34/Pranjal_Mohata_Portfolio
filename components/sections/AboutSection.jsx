@@ -6,6 +6,7 @@ import { gsap } from '@/lib/gsap'
 import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube } from 'react-icons/fa'
 import profile from '@/data/profile.json'
 import styles from '@/styles/sections/AboutSection.module.css'
+import SkillsOrbit from '@/components/ui/SkillsOrbit'
 
 const BIO      = profile.bio
 const WHO_ITEMS = profile.skills
@@ -148,6 +149,9 @@ export default function AboutSection() {
             ))}
           </p>
         </div>
+
+        {/* 3D revolving skills orbit */}
+        <SkillsOrbit />
 
       </div>
     </section>
