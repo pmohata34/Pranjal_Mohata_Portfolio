@@ -19,8 +19,10 @@
   right: 0;
   top: 0;
   height: 100%;
-  width: 55%;
+  aspect-ratio: 9 / 16;
   z-index: 1;
+  mask-image: linear-gradient(to right, transparent 0%, black 20%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
 }
 
 .photoImg {
@@ -338,6 +340,9 @@
     top: auto;
     bottom: 0;
     right: 0;
+    aspect-ratio: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 
   .stats       { gap: 0.35rem; flex-wrap: wrap; }
