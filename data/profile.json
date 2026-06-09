@@ -1,0 +1,196 @@
+{
+  "name": {
+    "first": "Pranjal",
+    "last": "Mohata",
+    "full": "Pranjal Mohata"
+  },
+  "email": "pranjalmohata06@gmail.com",
+  "tagline": "Building high-performance, responsive full-stack applications with modern web architectures.",
+  "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cloud platforms. 9x AWS Certified.",
+  "roles": {
+    "short": "Full Stack Developer",
+    "detailed": "Full-Stack Developer · Web Engineer · 9x AWS Certified"
+  },
+  "location": {
+    "based": "Kolkata, India",
+    "availability": "Remote / On-site"
+  },
+  "available": true,
+  "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9x AWS Certified, and Postman API Expert. Seeking full-time Software Engineer and Full Stack Developer roles.",
+  "stats": [
+    { "value": "2",  "label": "Internships" },
+    { "value": "5+", "label": "Projects Completed" },
+    { "value": "9x",   "label": "AWS Certified" }
+  ],
+  "skills": [
+    "Full Stack Developer",
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Supabase",
+    "Firebase",
+    "AWS Cloud",
+    "Tailwind CSS",
+    "GSAP",
+    "Three.js",
+    "Postman API"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Web Development Intern",
+      "company": "Intern Certify",
+      "companyShort": "INTERN CERTIFY",
+      "type": "Internship",
+      "location": "Remote",
+      "period": "Jul 2024",
+      "periodEnd": "Oct 2024",
+      "bullets": [
+        "Delivered web application features across a 4-month engagement using HTML5, CSS3, JavaScript, and React within professional sprint timelines.",
+        "Contributed to production builds with cross-browser compatibility testing and mobile-responsive design implementation.",
+        "Collaborated in an Agile development environment, participating in sprint planning and code review processes."
+      ],
+      "desc": "Delivered web application features using React and vanilla JS. Implemented responsive designs and worked in an Agile environment.",
+      "tech": [
+        "React.js",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Agile"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Web Development Intern",
+      "company": "CodSoft",
+      "companyShort": "CODSOFT",
+      "type": "Internship",
+      "location": "Remote",
+      "period": "Jul 2024",
+      "periodEnd": "Aug 2024",
+      "bullets": [
+        "Built and shipped 3 core web application modules using HTML5, CSS3, and JavaScript within tight 2-month sprint cycles.",
+        "Implemented responsive design patterns ensuring consistent UI rendering across Chrome, Firefox, Safari, and Edge browsers."
+      ],
+      "desc": "Built core web modules under 2-month cycles. Focused on cross-browser compatibility and layout responsiveness.",
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "Research Analyst",
+      "company": "Insightify Research",
+      "companyShort": "INSIGHTIFY",
+      "type": "Contract",
+      "location": "Remote",
+      "period": "Aug 2024",
+      "periodEnd": "Jan 2025",
+      "bullets": [
+        "Conducted structured qualitative research and B2B lead generation, compiling actionable market insights for client growth strategies over 6 months."
+      ],
+      "desc": "Conducted market research and B2B lead generation to build data-driven client growth strategies.",
+      "tech": [
+        "Qualitative Research",
+        "Lead Generation",
+        "B2B Insights"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Adamas CR Voting System",
+      "subtitle": "University-Deployed Voting Platform",
+      "type": "Web App",
+      "link": "https://github.com/pmohata34",
+      "image": "/assets/project-artgenio.png",
+      "tech": ["React", "TypeScript", "Firebase", "TanStack Query", "Recharts", "Tailwind CSS"],
+      "desc": "Secure voting platform actively used by Adamas University students. Features email verification and one-vote-per-user enforcement with Firestore real-time sync, and an admin dashboard with Recharts live results."
+    },
+    {
+      "id": 2,
+      "title": "DataScrape",
+      "subtitle": "SaaS Web Scraping Platform",
+      "type": "SaaS",
+      "link": "https://github.com/pmohata34",
+      "image": "/assets/project-easyfolio.png",
+      "tech": ["React", "TypeScript", "Supabase", "PostgreSQL", "Edge Functions", "Firecrawl", "Apify"],
+      "desc": "SaaS-style web scraping application with user auth, per-user scrape history, and export pipeline. Built fully serverless with Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
+    },
+    {
+      "id": 3,
+      "title": "LETHE",
+      "subtitle": "Product Website with 3D Animation",
+      "type": "Hackathon 1st Place",
+      "link": "https://github.com/pmohata34",
+      "image": "/assets/project-artgenio.png",
+      "tech": ["Next.js", "TypeScript", "GSAP", "Three.js", "Lenis", "Framer Motion", "Tailwind CSS"],
+      "desc": "Product website for a cryptographic data-wiping SaaS featuring 3D scene rendering, GSAP ScrollTrigger animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
+    },
+    {
+      "id": 4,
+      "title": "NeoLearn",
+      "subtitle": "SSR Student Dashboard",
+      "type": "Full Stack",
+      "link": "https://github.com/pmohata34",
+      "image": "/assets/project-easyfolio.png",
+      "tech": ["Next.js", "Supabase", "Framer Motion", "Tailwind CSS"],
+      "desc": "Dark student dashboard featuring Supabase server-side rendering (SSR), course progress tracking, and mobile-first responsive components built with Next.js App Router and animated with Framer Motion."
+    },
+    {
+      "id": 5,
+      "title": "RoomMates Connect",
+      "subtitle": "Full Stack Matching App",
+      "type": "MERN Stack",
+      "link": "https://github.com/pmohata34",
+      "image": "/assets/project-easyfolio.png",
+      "tech": ["React", "Vite", "Node.js", "Express.js", "JWT Auth", "MongoDB"],
+      "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
+    }
+  ],
+  "publications": [
+    {
+      "id": 1,
+      "title": "Adamas University Internal Hackathon Winner (1st Place)",
+      "platform": "Adamas University",
+      "year": "2025",
+      "link": "https://github.com/pmohata34",
+      "desc": "Awarded 1st Place in Software Category at Internal Hackathon 2025 for building LETHE, a cryptographic data-wiping SaaS application, under a 24-hour time constraint."
+    },
+    {
+      "id": 2,
+      "title": "AWS Academy Graduate — 9 certifications",
+      "platform": "Amazon Web Services",
+      "year": "2026",
+      "link": "https://github.com/pmohata34",
+      "desc": "Completed 9 AWS Academy courses/certifications including Cloud Foundations, Generative AI Foundations, and Cloud Web Application Builder."
+    },
+    {
+      "id": 3,
+      "title": "Postman API Fundamentals Student Expert",
+      "platform": "Postman",
+      "year": "2025",
+      "link": "https://github.com/pmohata34",
+      "desc": "Recognized student expert in API fundamentals, verifying API design, API testing, mock servers, and automated integration testing."
+    },
+    {
+      "id": 4,
+      "title": "IBM TechXchange AI & Automation Hackathon",
+      "platform": "IBM",
+      "year": "2025",
+      "link": "https://github.com/pmohata34",
+      "desc": "Participated in the IBM TechXchange Dev Day hackathon, focusing on building applications with enterprise AI APIs and automation platforms."
+    }
+  ],
+  "socials": [
+    { "label": "GitHub",    "href": "https://github.com/pmohata34" },
+    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/pranjal-mohata" }
+  ]
+}

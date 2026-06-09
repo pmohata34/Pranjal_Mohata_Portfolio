@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ─── Brand tokens (Synthwave / Deep Space Purple & Magenta) ─ */
+:root {
+  /* Hero gradient - deep midnight violet to fuchsia */
+  --hero-start: #06020f; /* deep space midnight */
+  --hero-mid:   #150933; /* nebulous violet */
+  --hero-end:   #0d0421; /* deep space indigo */
+
+  /* Accent - neon fuchsia/magenta */
+  --accent:       #d946ef;
+  --accent-hover: #f472b6;
+  --accent-rgb:   217, 70, 239;
+
+  /* Text - vibrant light colors on dark background */
+  --text-primary: #f5f3ff; /* light violet */
+  --text-muted:   #c084fc; /* soft violet/purple */
+  --text-on-dark: #fdf4ff; /* soft pink */
+  --text-dark:    #ffffff; /* white for headers */
+
+  /* Surfaces - dark midnight shades */
+  --surface-white: #06020f; /* main body background */
+  --surface-black: #030107; /* pitch black/purple */
+  --surface-amber: #13092b; /* deep indigo card surface */
+
+  /* Card specific styles */
+  --card-bg:      rgba(19, 9, 43, 0.52);
+  --card-border:  rgba(168, 85, 247, 0.22);
+
+  /* Status */
+  --status-available: #10b981;
+
+  /* Navbar */
+  --navbar-text:    #f5f3ff;
+  --email-btn-bg:   #d946ef;
+  --email-btn-text: #06020f;
+
+  /* Type scale */
+  --hero-name-size: clamp(4.5rem, 13vw, 12rem);
+  --text-body:  clamp(0.9rem, 1.2vw, 1.05rem);
+  --text-small: 0.72rem;
+  --hero-role-size: clamp(0.75rem, 1.2vw, 0.875rem);
+
+  /* ─── shadcn var bridge ── */
+  --background:   var(--surface-white);
+  --foreground:   var(--text-primary);
+  --primary:      var(--text-primary);
+  --primary-foreground: var(--surface-white);
+  --ring:         var(--accent);
+  --radius:       9999px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--background);
+  color:      var(--foreground);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+/* ─── Hide scrollbar ─────────────────────────────────────── */
+main::-webkit-scrollbar { display: none; }
+main { scrollbar-width: none; -ms-overflow-style: none; }
+
+@media (max-width: 767px) {
+  :root {
+    --hero-name-size: clamp(3rem, 10vw, 5rem);
+  }
+
+  /* Override inline 100vh - Chrome mobile toolbar hides bottom content */
+  html, body { height: 100svh !important; }
+  main { height: 100svh !important; }
+}

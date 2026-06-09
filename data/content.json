@@ -1,0 +1,27 @@
+{
+  "site": {
+    "tagline": "Portfolio 2026"
+  },
+  "hero": {
+    "taglineHighlight": "applications",
+    "freelanceNote": "Open to Software Engineer & Full Stack roles.",
+    "availableLabel": "Open to work",
+    "pills": ["Full Stack Developer", "MERN Stack", "React & Next.js", "9x AWS Certified"],
+    "specialistStat": { "value": "MERN Stack", "label": "Developer" }
+  },
+  "interstitial": {
+    "availabilityLabel": "Availability",
+    "basedInLabel": "Based in",
+    "statLabels": ["Completed\ninternships", "Projects\ncompleted", "AWS Academy\ncertifications"]
+  },
+  "publications": {
+    "eyebrow": "Credentials & Achievements",
+    "heading": "Certifications",
+    "watermark": "HONORS"
+  },
+  "footer": {
+    "eyebrow": "Open for full-time opportunities",
+    "ctaLines": ["Building modern", "web products", "that scale"],
+    "ctaAccent": "seamlessly."
+  }
+}
