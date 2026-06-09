@@ -149,6 +149,7 @@ export default function HeroBackground() {
         if (p1[i*3+1] > 6)  p1[i*3+1] = -6
       }
       g1.attributes.position.needsUpdate = true
+      pts1.rotation.z = elapsed * 0.02
 
       // Drift layer 2 (slower, larger blobs)
       for (let i = 0; i < N2; i++) {
@@ -157,6 +158,7 @@ export default function HeroBackground() {
         if (p2[i*3+1] > 6)  p2[i*3+1] = -6
       }
       g2.attributes.position.needsUpdate = true
+      pts2.rotation.z = -elapsed * 0.01
 
       renderer.render(scene, camera)
     }
