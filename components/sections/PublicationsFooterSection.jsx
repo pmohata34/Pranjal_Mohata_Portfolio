@@ -551,12 +551,13 @@ export default function PublicationsFooterSection() {
 
           <div ref={bottomBarRef} className={styles.bottomBar}>
             <div className={styles.bottomLeft}>
-              <div className={styles.monogram}>
-                <span className={styles.monoLetters}>
-                  {`${profile.name.first[0]}${profile.name.last[0]}`.toUpperCase()}
-                </span>
-                <span className={styles.monoDot} />
-              </div>
+              <Image
+                src="/assets/logo.png"
+                alt="PM Monogram Logo"
+                width={40}
+                height={40}
+                className={styles.footerLogo}
+              />
               <span className={styles.leftDivider} />
               <div className={styles.copyBlock}>
                 <p className={styles.copy}>© {year} {profile.name.full.toUpperCase()}</p>

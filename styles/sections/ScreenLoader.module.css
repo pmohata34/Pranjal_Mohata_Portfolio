@@ -225,3 +225,32 @@
     font-size: 0.68rem;
   }
 }
+
+.loaderLogoWrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.loaderLogo {
+  width: clamp(3.5rem, 8vw, 5rem);
+  height: clamp(3.5rem, 8vw, 5rem);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(217, 70, 239, 0.6);
+  animation: logoPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(217, 70, 239, 0.4);
+  }
+  100% {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(217, 70, 239, 0.75);
+  }
+}

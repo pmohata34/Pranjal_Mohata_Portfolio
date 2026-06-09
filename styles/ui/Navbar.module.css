@@ -11,6 +11,21 @@
   color: var(--navbar-text);
 }
 
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: opacity 0.35s ease;
+}
+
+.navLogo {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 12px rgba(217, 70, 239, 0.55);
+}
+
 .time {
   font-size: 0.75rem;
   font-weight: 600;
@@ -81,7 +96,7 @@
 }
 
 /* ── VideoIntro mode: hide time + nav, keep email only ── */
-.introMode .time {
+.introMode .brandWrapper {
   opacity: 0;
   pointer-events: none;
 }

@@ -94,6 +94,10 @@ export default function ScreenLoader({ onDismiss }) {
     <div ref={overlayRef} className={styles.overlay}>
       <div className={styles.liquidBg} aria-hidden />
 
+      <div className={styles.loaderLogoWrap}>
+        <img src="/assets/logo.png" alt="PM Monogram Logo" className={styles.loaderLogo} />
+      </div>
+
       <p className={styles.monogram}>
         {profile.name.full.toUpperCase()}
       </p>

@@ -92,7 +92,10 @@ export default function Navbar() {
   return (
     <>
       <header ref={headerRef} className={`${styles.header} ${onIntro ? styles.introMode : ''} ${onDark ? styles.darkMode : ''}`}>
-        <span className={styles.time}>INDIA TIME - {time}</span>
+        <div className={styles.brandWrapper}>
+          <img src="/assets/logo.png" alt="PM Monogram Logo" className={styles.navLogo} />
+          <span className={styles.time}>INDIA TIME - {time}</span>
+        </div>
 
         <NavigationMenu className={styles.navMenu}>
           <NavigationMenuList className="flex gap-6">
