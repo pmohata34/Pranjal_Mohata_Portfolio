@@ -19,8 +19,8 @@ If this helped you, consider leaving a ⭐ on GitHub.
 ## Getting Started
 
 ```bash
-git clone https://github.com/VaibhavKhushalani/cinematic-portfolio.git
-cd cinematic-portfolio
+git clone https://github.com/pmohata34/Pranjal_Mohata_Portfolio.git
+cd Pranjal_Mohata_Portfolio
 npm install
 npm run dev
 ```
