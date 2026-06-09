@@ -2,7 +2,7 @@
 
 A high-performance personal portfolio built with Next.js 16, GSAP, Three.js, and CSS Modules. Designed to be forked and used as your own.
 
-**Live:** [pranjal-mohata.vercel.app](https://pranjal-mohata.vercel.app) &nbsp;|&nbsp; **GitHub:** [pmohata34/Pranjal_Mohata_Portfolio](https://github.com/pmohata34/Pranjal_Mohata_Portfolio.git)
+**Live:** [pranjal-mohata-portfolio.vercel.app](https://pranjal-mohata-portfolio.vercel.app) &nbsp;|&nbsp; **GitHub:** [pmohata34/Pranjal_Mohata_Portfolio](https://github.com/pmohata34/Pranjal_Mohata_Portfolio.git)
 
 If this helped you, consider leaving a ⭐ on GitHub.
 
