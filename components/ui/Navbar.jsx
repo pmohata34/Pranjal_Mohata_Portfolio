@@ -132,16 +132,8 @@ export default function Navbar() {
         </NavigationMenu>
 
         <a
-          onClick={() => {
-            const scroller = document.querySelector('main')
-            if (scroller) gsap.to(scroller, {
-              scrollTop: 8 * window.innerHeight,
-              duration: 1.0,
-              ease: 'power3.inOut',
-            })
-          }}
+          href={`mailto:${profile.email}`}
           className={`${styles.emailBtn} rounded-full text-xs font-semibold px-5 h-8`}
-          style={{ cursor: 'pointer' }}
         >
           Email me
         </a>
