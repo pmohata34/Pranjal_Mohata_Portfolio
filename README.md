@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #  Pranjal Mohata Portfolio
-=======
-# 🪐 Personal Portfolio
->>>>>>> 2ae7c35513a0e43c57286e3343fe429c2409d7af
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=3000&pause=1000&color=d946ef&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;9%2B+AWS+Academy+Certified;Specializing+in+Next.js+%2B+Three.js" alt="Typing SVG" />
