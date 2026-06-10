@@ -6,7 +6,7 @@
     "taglineHighlight": "applications",
     "freelanceNote": "Open to Software Engineer & Full Stack roles.",
     "availableLabel": "Open to work",
-    "pills": ["Full Stack Developer", "MERN Stack", "React & Next.js", "9x AWS Certified"],
+    "pills": ["Full Stack Developer", "MERN Stack", "React & Next.js", "9+ AWS Certified"],
     "specialistStat": { "value": "MERN Stack", "label": "Developer" }
   },
   "interstitial": {

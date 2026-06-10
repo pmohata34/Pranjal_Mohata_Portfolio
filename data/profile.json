@@ -7,17 +7,17 @@
   "email": "pranjalmohata.work@gmail.com",
   "web3formsKey": "331e9c71-c102-4768-b3e0-052a9ced2b4b",
   "tagline": "Building high-performance, responsive full-stack applications with modern web architectures.",
-  "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cloud platforms. 9x AWS Certified.",
+  "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cloud platforms. 9+ AWS Certified.",
   "roles": {
     "short": "Full Stack Developer",
-    "detailed": "Full-Stack Developer · Web Engineer · 9x AWS Certified"
+    "detailed": "Full-Stack Developer · Web Engineer · 9+ AWS Certified"
   },
   "location": {
     "based": "Kolkata, India",
     "availability": "Remote / On-site"
   },
   "available": true,
-  "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9x AWS Certified, and Postman API Expert. Seeking full-time Software Engineer and Full Stack Developer roles.",
+  "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9+ AWS Certified, and Postman API Expert. Seeking full-time Software Engineer and Full Stack Developer roles.",
   "stats": [
     {
       "value": "2",
@@ -28,7 +28,7 @@
       "label": "Projects Completed"
     },
     {
-      "value": "9x",
+      "value": "9+",
       "label": "AWS Certified"
     }
   ],
@@ -220,11 +220,11 @@
     },
     {
       "id": 2,
-      "title": "AWS Academy Graduate — 9 certifications",
+      "title": "AWS Academy Graduate — 9+ certifications",
       "platform": "Amazon Web Services",
       "year": "2026",
       "link": "https://github.com/pmohata34",
-      "desc": "Completed 9 AWS Academy courses/certifications including Cloud Foundations, Generative AI Foundations, and Cloud Web Application Builder."
+      "desc": "Completed 9+ AWS Academy courses/certifications including Cloud Foundations, Generative AI Foundations, and Cloud Web Application Builder."
     },
     {
       "id": 3,
