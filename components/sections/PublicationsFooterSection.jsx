@@ -14,17 +14,17 @@ import styles from '@/styles/sections/PublicationsFooterSection.module.css'
 const PUBS = profile.publications
 
 const SOCIAL_ICONS = {
-  GitHub:    <FaGithub    size={13} />,
-  LinkedIn:  <FaLinkedinIn  size={13} />,
-  Medium:    <FaMedium    size={13} />,
+  GitHub: <FaGithub size={13} />,
+  LinkedIn: <FaLinkedinIn size={13} />,
+  Medium: <FaMedium size={13} />,
   Instagram: <FaInstagram size={13} />,
-  YouTube:   <FaYoutube   size={13} />,
-  Email:     <FaEnvelope  size={13} />,
+  YouTube: <FaYoutube size={13} />,
+  Email: <FaEnvelope size={13} />,
 }
 
 const MOBILE_SOCIAL_ICONS = {
-  GitHub:    <FaGithub    size={20} />,
-  LinkedIn:  <FaLinkedinIn  size={20} />,
+  GitHub: <FaGithub size={20} />,
+  LinkedIn: <FaLinkedinIn size={20} />,
   Instagram: <FaInstagram size={20} />,
 }
 const HERO_SOCIAL_LABELS = ['GitHub', 'LinkedIn', 'Instagram']
@@ -47,7 +47,7 @@ function handleViewProjects() {
 
 export default function PublicationsFooterSection() {
   const wrapperRef = useRef(null)
-  const stickyRef  = useRef(null)
+  const stickyRef = useRef(null)
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState('')
@@ -59,7 +59,7 @@ export default function PublicationsFooterSection() {
 
     const form = e.target
     const data = new FormData(form)
-    
+
     const web3Key = profile.web3formsKey || "dbffc85a-06b8-4c8d-b0f3-e5d4481079d3"
     data.append("access_key", web3Key)
     data.append("subject", "New Portfolio Message from " + data.get("name"))
@@ -91,7 +91,7 @@ export default function PublicationsFooterSection() {
           <input type="text" id="name" name="name" required placeholder="John Doe" className={styles.formInput} />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="email" className={styles.formLabel}>Email</label>
+          <label htmlFor="email" className={styles.formLabel}>Your Email</label>
           <input type="email" id="email" name="email" required placeholder="john@example.com" className={styles.formInput} />
         </div>
         <div className={styles.formGroup}>
@@ -107,29 +107,29 @@ export default function PublicationsFooterSection() {
   }
 
   // image
-  const imageWrapRef    = useRef(null)
+  const imageWrapRef = useRef(null)
   const imageOverlayRef = useRef(null)
 
   // publication content
   const pubContentRef = useRef(null)
-  const labelRef      = useRef(null)
-  const headingRef    = useRef(null)
-  const dividerRef    = useRef(null)
-  const itemRefs      = useRef([])
+  const labelRef = useRef(null)
+  const headingRef = useRef(null)
+  const dividerRef = useRef(null)
+  const itemRefs = useRef([])
 
 
 
   // footer
-  const footerContentRef  = useRef(null)
-  const leftRef         = useRef(null)
-  const rightRef        = useRef(null)
-  const bigNameRef      = useRef(null)
-  const bottomBarRef    = useRef(null)
+  const footerContentRef = useRef(null)
+  const leftRef = useRef(null)
+  const rightRef = useRef(null)
+  const bigNameRef = useRef(null)
+  const bottomBarRef = useRef(null)
 
   useEffect(() => {
-    const wrapper       = wrapperRef.current
-    const sticky        = stickyRef.current
-    const scroller      = document.querySelector('main')
+    const wrapper = wrapperRef.current
+    const sticky = stickyRef.current
+    const scroller = document.querySelector('main')
     if (!wrapper || !sticky || !scroller) return
 
     const isMobile = window.innerWidth < 768
@@ -139,7 +139,7 @@ export default function PublicationsFooterSection() {
 
     function resetPubAnim() {
       pubAnimDone = false
-      gsap.set(labelRef.current,   { opacity: 0, y: -16, rotateX: 40, transformPerspective: 500, transformOrigin: '50% 0%' })
+      gsap.set(labelRef.current, { opacity: 0, y: -16, rotateX: 40, transformPerspective: 500, transformOrigin: '50% 0%' })
       gsap.set(headingRef.current, { opacity: 0, y: -30, rotateX: 35, transformPerspective: 700, transformOrigin: '50% 0%' })
       gsap.set(dividerRef.current, { scaleX: 0, transformOrigin: 'left center' })
       itemRefs.current.forEach(el => {
@@ -150,7 +150,7 @@ export default function PublicationsFooterSection() {
     function playPubAnim() {
       if (pubAnimDone) return
       pubAnimDone = true
-      gsap.to(labelRef.current,   { opacity: 1, y: 0, rotateX: 0, duration: 0.55, ease: 'power3.out' })
+      gsap.to(labelRef.current, { opacity: 1, y: 0, rotateX: 0, duration: 0.55, ease: 'power3.out' })
       gsap.to(headingRef.current, { opacity: 1, y: 0, rotateX: 0, duration: 0.75, ease: 'expo.out', delay: 0.08 })
       gsap.to(dividerRef.current, { scaleX: 1, duration: 0.7, ease: 'power2.inOut', delay: 0.25 })
       itemRefs.current.forEach((el, i) => {
@@ -167,7 +167,7 @@ export default function PublicationsFooterSection() {
 
     // ── Scroll-driven animation ───────────────────────────────
     function onScroll() {
-      const vh   = window.innerHeight
+      const vh = window.innerHeight
       const dist = -wrapper.getBoundingClientRect().top
 
       // Entry: play pub animation when section first enters view
@@ -190,11 +190,11 @@ export default function PublicationsFooterSection() {
       if (!isMobile) {
         // ── Phase 2: image shrinks full-width → centered (p 0.05 → 0.90) ──
         const imgRaw = Math.max(0, Math.min(1, (p - 0.05) / 0.85))
-        const imgP   = easeInOut(imgRaw)
+        const imgP = easeInOut(imgRaw)
 
-        const startW  = vw
-        const endW    = vw * 0.46
-        const w       = startW + imgP * (endW - startW)
+        const startW = vw
+        const endW = vw * 0.46
+        const w = startW + imgP * (endW - startW)
         const centerX = imgP * (vw - w) / 2
 
         gsap.set(imageWrapRef.current, { width: w, x: centerX, opacity: 1 })
@@ -263,7 +263,7 @@ export default function PublicationsFooterSection() {
           <span className={styles.watermark} aria-hidden>{(content.publications?.watermark || "Writing").toUpperCase()}</span>
 
           <div className={styles.pubHero}>
-            <p  ref={labelRef}   className={styles.label}>{content.publications?.eyebrow || "Research & Writing"}</p>
+            <p ref={labelRef} className={styles.label}>{content.publications?.eyebrow || "Research & Writing"}</p>
             <h2 ref={headingRef} className={styles.heading}>{content.publications?.heading || "Publications"}</h2>
           </div>
 

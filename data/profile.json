@@ -120,7 +120,7 @@
       "subtitle": "SaaS Web Scraping Platform",
       "type": "SaaS",
       "year": "2026",
-      "github": "https://github.com/pmohata34/DataScrape",
+      "github": "https://github.com/pmohata34/Data-Scape",
       "live": "https://data-scape-eight.vercel.app/",
       "image": "/assets/DataScrape.png",
       "tech": [
@@ -140,7 +140,7 @@
       "subtitle": "Product Website with 3D Animation",
       "type": "Hackathon 1st Place",
       "year": "2025",
-      "github": "https://github.com/pmohata34/LETHE",
+      "github": "https://github.com/pmohata34/LETHE_0day",
       "live": "https://lethe-0day.vercel.app/",
       "image": "/assets/Lethe.png",
       "tech": [
@@ -244,10 +244,6 @@
     }
   ],
   "socials": [
-    {
-      "label": "Email",
-      "href": "pranjalmohata.work@gmail.com"
-    },
     {
       "label": "GitHub",
       "href": "https://github.com/pmohata34"

@@ -14,11 +14,12 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 
 // idx matches snap position in page.js (0=video,1=hero,2=about,3-5=projects,6=work-exp,7=publications,8=footer)
 const NAV_ITEMS = [
-  { label: 'Home',       idx: 0 },
-  { label: 'About',      idx: 2 },
-  { label: 'Projects',   idx: 3 },
-  { label: 'Experience', idx: 6 },
-  { label: 'Contact',    idx: 8 },
+  { label: 'Home',         idx: 0 },
+  { label: 'About',        idx: 2 },
+  { label: 'Projects',     idx: 3 },
+  { label: 'Experience',   idx: 6 },
+  { label: 'Certificates', idx: 7 },
+  { label: 'Contact',      idx: 8 },
 ]
 
 function getActiveNavItem(sectionIdx) {
@@ -26,7 +27,8 @@ function getActiveNavItem(sectionIdx) {
   if (sectionIdx === 2) return 2 // About
   if (sectionIdx >= 3 && sectionIdx <= 5) return 3 // Projects
   if (sectionIdx === 6) return 6 // Experience
-  return 8 // Contact (7 = Publications, 8 = Footer)
+  if (sectionIdx === 7) return 7 // Certificates
+  return 8 // Contact
 }
 
 function getIST() {
