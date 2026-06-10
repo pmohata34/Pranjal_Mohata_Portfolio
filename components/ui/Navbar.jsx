@@ -12,15 +12,22 @@ import profile from '@/data/profile.json'
 import styles from '@/styles/ui/Navbar.module.css'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
-// idx matches snap position in page.js (0=video,1=hero,2=about,3-4=projects,5=work-exp,6=publications,7=footer)
+// idx matches snap position in page.js (0=video,1=hero,2=about,3-5=projects,6=work-exp,7=publications,8=footer)
 const NAV_ITEMS = [
-  { label: 'Home',         idx: 0 },
-  { label: 'About',        idx: 2 },
-  { label: 'Projects',     idx: 3 },
-  { label: 'Experience',   idx: 5 },
-  { label: 'Publications', idx: 6 },
-  { label: 'Contact',      idx: 7 },
+  { label: 'Home',       idx: 0 },
+  { label: 'About',      idx: 2 },
+  { label: 'Projects',   idx: 3 },
+  { label: 'Experience', idx: 6 },
+  { label: 'Contact',    idx: 8 },
 ]
+
+function getActiveNavItem(sectionIdx) {
+  if (sectionIdx <= 1) return 0 // Home
+  if (sectionIdx === 2) return 2 // About
+  if (sectionIdx >= 3 && sectionIdx <= 5) return 3 // Projects
+  if (sectionIdx === 6) return 6 // Experience
+  return 8 // Contact (7 = Publications, 8 = Footer)
+}
 
 function getIST() {
   return new Date().toLocaleTimeString('en-IN', {
@@ -37,6 +44,7 @@ export default function Navbar() {
   const [onIntro, setOnIntro] = useState(true)
   const [onDark,  setOnDark]  = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeIdx, setActiveIdx] = useState(0)
   const headerRef   = useRef(null)
   const lastY       = useRef(0)
   const hidden      = useRef(false)
@@ -67,6 +75,7 @@ export default function Navbar() {
       const sectionIdx = Math.round(currentY / vh)
       setOnIntro(currentY < vh * 0.8)
       setOnDark(sectionIdx >= 3)
+      setActiveIdx(getActiveNavItem(sectionIdx))
 
       if (delta > 8 && !hidden.current) {
         gsap.to(headerRef.current, { y: '-100%', duration: 0.35, ease: 'power2.inOut' })
@@ -102,7 +111,7 @@ export default function Navbar() {
             {NAV_ITEMS.map(({ label, idx }) => (
               <NavigationMenuItem key={label}>
                 <NavigationMenuLink
-                  className={styles.navLink}
+                  className={`${styles.navLink} ${activeIdx === idx ? styles.activeLink : ''}`}
                   onClick={() => {
                     const scroller = document.querySelector('main')
                     if (scroller) gsap.to(scroller, {
@@ -121,8 +130,16 @@ export default function Navbar() {
         </NavigationMenu>
 
         <a
-          href={`mailto:${profile.email}`}
+          onClick={() => {
+            const scroller = document.querySelector('main')
+            if (scroller) gsap.to(scroller, {
+              scrollTop: 8 * window.innerHeight,
+              duration: 1.0,
+              ease: 'power3.inOut',
+            })
+          }}
           className={`${styles.emailBtn} rounded-full text-xs font-semibold px-5 h-8`}
+          style={{ cursor: 'pointer' }}
         >
           Email me
         </a>
@@ -141,7 +158,7 @@ export default function Navbar() {
           {NAV_ITEMS.map(({ label, idx }) => (
             <button
               key={label}
-              className={styles.mobileNavLink}
+              className={`${styles.mobileNavLink} ${activeIdx === idx ? styles.activeLink : ''}`}
               onClick={() => {
                 const scroller = document.querySelector('main')
                 if (scroller) gsap.to(scroller, {

@@ -226,3 +226,14 @@
   .bio        { font-size: clamp(0.85rem, 1.4vw, 1.2rem); }
   .signature  { font-size: 4rem; }
 }
+
+.highlightText {
+  display: inline;
+}
+
+.highlightChar {
+  color: var(--accent) !important;
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.6);
+  font-weight: 900;
+  transition: text-shadow 0.3s ease;
+}

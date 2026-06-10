@@ -129,26 +129,61 @@
 }
 
 .iconLink {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 2.3rem;
   height: 2.3rem;
-  border-radius: 50%;
+  width: 2.3rem;
+  padding-left: 0.68rem; /* keeps icon stable relative to the left margin */
+  border-radius: 9999px;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.25s, color 0.25s, transform 0.25s;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.25s,
+              color 0.25s,
+              box-shadow 0.25s,
+              transform 0.25s;
   text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.iconLink svg {
+  flex-shrink: 0;
+}
+
+.linkLabel {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  font-family: var(--font-geist-mono), monospace;
+  line-height: 1;
 }
 
 .iconLink:hover {
   background: #000000;
   color: var(--accent);
-  transform: scale(1.1);
   box-shadow: 0 0 15px rgba(217, 70, 239, 0.45);
+  transform: scale(1.05);
+}
+
+.iconLink:hover.githubLink {
+  width: 6.8rem;
+}
+
+.iconLink:hover.liveLink {
+  width: 7.8rem;
+}
+
+.iconLink:hover .linkLabel {
+  opacity: 1;
 }
 
 /* ── Card Info below Image ───────────────────── */

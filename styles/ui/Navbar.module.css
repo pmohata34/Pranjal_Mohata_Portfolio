@@ -47,6 +47,13 @@
   opacity: 0.6;
 }
 
+.activeLink {
+  color: var(--accent) !important;
+  opacity: 1 !important;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(217, 70, 239, 0.4);
+}
+
 .emailBtn {
   position: relative;
   overflow: hidden;

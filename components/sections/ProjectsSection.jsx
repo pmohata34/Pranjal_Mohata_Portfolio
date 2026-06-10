@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
+import { FiGlobe } from 'react-icons/fi'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 import profile from '@/data/profile.json'
 import styles from '@/styles/sections/ProjectsSection.module.css'
@@ -28,7 +29,7 @@ export default function ProjectsSection() {
       trigger:  section,
       scroller,
       start:    'top top',
-      end:      () => `+=${(PROJECTS.length - 1) * window.innerHeight}`,
+      end:      () => `+=${(3 - 1) * window.innerHeight}`,
       scrub:    true,
       animation: tl,
       onUpdate: (self) => {
@@ -92,13 +93,12 @@ export default function ProjectsSection() {
   }, [])
 
   return (
-    <div style={{ height: `${PROJECTS.length * 100}vh` }}>
+    <div style={{ height: '300vh' }}>
       <section ref={sectionRef} className={styles.section}>
 
         {/* Top bar */}
         <div className={styles.topBar}>
           <span className={styles.sectionLabel}>Projects</span>
-          <span className={styles.sectionSubLabel}>Selected Works</span>
         </div>
 
         {/* Vertical Grid Container */}
@@ -127,10 +127,11 @@ export default function ProjectsSection() {
                         href={proj.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.iconLink}
+                        className={`${styles.iconLink} ${styles.githubLink}`}
                         aria-label="GitHub Repository"
                       >
                         <FaGithub size={18} />
+                        <span className={styles.linkLabel}>GitHub</span>
                       </a>
                     )}
                     {proj.live && (
@@ -138,12 +139,11 @@ export default function ProjectsSection() {
                         href={proj.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.iconLink}
+                        className={`${styles.iconLink} ${styles.liveLink}`}
                         aria-label="Live Demo"
                       >
-                        <svg width="16" height="16" viewBox="0 0 12 12" fill="none" aria-hidden>
-                          <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
+                        <FiGlobe size={18} />
+                        <span className={styles.linkLabel}>Live Demo</span>
                       </a>
                     )}
                   </div>

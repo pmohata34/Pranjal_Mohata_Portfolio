@@ -11,6 +11,15 @@ import SkillsOrbit from '@/components/ui/SkillsOrbit'
 const BIO      = profile.bio
 const WHO_ITEMS = profile.skills
 
+const BIO_SEGMENTS = [
+  { text: "Full Stack Developer", highlight: true },
+  { text: " and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, ", highlight: false },
+  { text: "9x AWS Certified", highlight: true },
+  { text: ", and Postman API Expert. Seeking full-time Software Engineer and ", highlight: false },
+  { text: "Full Stack Developer", highlight: true },
+  { text: " roles.", highlight: false },
+]
+
 const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube }
 
 const SOCIALS = profile.socials.map(s => ({ Icon: ICON_MAP[s.label], href: s.href, label: s.label }))
@@ -135,18 +144,35 @@ export default function AboutSection() {
         {/* Bio text - typewriter: all chars always in DOM, only color changes */}
         <div className={styles.bioWrap}>
           <p className={styles.bio}>
-            {BIO.split('').map((char, i) => (
-              <span
-                key={i}
-                className={
-                  i < typed
-                    ? (i === typed - 1 && !done ? styles.lastTyped : styles.typed)
-                    : styles.untyped
-                }
-              >
-                {char}
-              </span>
-            ))}
+            {(() => {
+              let charIndex = 0
+              return BIO_SEGMENTS.map((seg, segIdx) => (
+                <span
+                  key={segIdx}
+                  className={seg.highlight ? styles.highlightText : ''}
+                >
+                  {seg.text.split('').map((char) => {
+                    const i = charIndex++
+                    const isTyped = i < typed
+                    const isLastTyped = i === typed - 1 && !done
+                    return (
+                      <span
+                        key={i}
+                        className={
+                          isTyped
+                            ? (isLastTyped
+                                ? styles.lastTyped
+                                : `${styles.typed} ${seg.highlight ? styles.highlightChar : ''}`)
+                            : styles.untyped
+                        }
+                      >
+                        {char}
+                      </span>
+                    )
+                  })}
+                </span>
+              ))
+            })()}
           </p>
         </div>
 

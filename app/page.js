@@ -12,9 +12,9 @@ import PublicationsFooterSection from '@/components/sections/PublicationsFooterS
 import ScreenLoader from '@/components/sections/ScreenLoader'
 import profile               from '@/data/profile.json'
 
-// Snap: 0=video 1=hero 2=about 3..4=projects 5=work-exp 6=publications 7=footer (mobile: 6=publications 7=footer)
-const PROJECT_SLIDES = profile.projects.length
-const TOTAL          = 7 + PROJECT_SLIDES  // 9
+// Snap: 0=video 1=hero 2=about 3-5=projects 6=work-exp 7=publications 8=footer (mobile: 7=publications 8=footer)
+const PROJECT_SLIDES = 3
+const TOTAL          = 6 + PROJECT_SLIDES  // 9
 
 export default function Home() {
   const mainRef        = useRef(null)

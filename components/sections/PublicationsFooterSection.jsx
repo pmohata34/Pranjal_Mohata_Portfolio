@@ -1,7 +1,6 @@
-
 'use client'
 
-import { useEffect, useRef, Fragment } from 'react'
+import { useEffect, useRef, useState, Fragment } from 'react'
 import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
 import {
@@ -49,6 +48,63 @@ export default function PublicationsFooterSection() {
   const wrapperRef = useRef(null)
   const stickyRef  = useRef(null)
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState('')
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('')
+
+    const form = e.target
+    const data = new FormData(form)
+    
+    const web3Key = profile.web3formsKey || "dbffc85a-06b8-4c8d-b0f3-e5d4481079d3"
+    data.append("access_key", web3Key)
+    data.append("subject", "New Portfolio Message from " + data.get("name"))
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data
+      })
+      const result = await response.json()
+      if (result.success) {
+        setSubmitStatus("Thank you! Your message has been sent successfully.")
+        form.reset()
+      } else {
+        setSubmitStatus("Something went wrong. Please try emailing directly: " + profile.email)
+      }
+    } catch (error) {
+      setSubmitStatus("Error sending message. Please try emailing directly: " + profile.email)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  function renderContactForm() {
+    return (
+      <form onSubmit={handleSubmit} className={styles.contactForm}>
+        <div className={styles.formGroup}>
+          <label htmlFor="name" className={styles.formLabel}>Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe" className={styles.formInput} />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email" className={styles.formLabel}>Email</label>
+          <input type="email" id="email" name="email" required placeholder="john@example.com" className={styles.formInput} />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="message" className={styles.formLabel}>Message</label>
+          <textarea id="message" name="message" required placeholder="Tell me about your project..." rows={3} className={styles.formTextarea}></textarea>
+        </div>
+        <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+        {submitStatus && <p className={styles.submitStatus}>{submitStatus}</p>}
+      </form>
+    )
+  }
+
   // image
   const imageWrapRef    = useRef(null)
   const imageOverlayRef = useRef(null)
@@ -60,8 +116,7 @@ export default function PublicationsFooterSection() {
   const dividerRef    = useRef(null)
   const itemRefs      = useRef([])
 
-  // image-only interstitial
-  const interstitialRef = useRef(null)
+
 
   // footer
   const footerContentRef  = useRef(null)
@@ -122,24 +177,18 @@ export default function PublicationsFooterSection() {
         setImageLeft()
       }
 
-      const p = Math.max(0, Math.min(1, dist / (2 * vh)))
+      const p = Math.max(0, Math.min(1, dist / vh))
 
       // ── Phase 1: pub text fades out ──────────────────────
-      const pubFadeEnd = isMobile ? 0.25 : 0.28
+      const pubFadeEnd = 0.40
       const pubFade = 1 - Math.max(0, Math.min(1, p / pubFadeEnd))
       gsap.set(pubContentRef.current, { opacity: pubFade, pointerEvents: pubFade > 0.05 ? 'auto' : 'none' })
 
       const vw = window.innerWidth
 
-      if (isMobile) {
-        // footer-mobile.webp static background - interstitial fades between pub and footer
-        const interIn  = Math.max(0, Math.min(1, (p - 0.28) / 0.17))
-        const interOut = Math.max(0, Math.min(1, (p - 0.60) / 0.12))
-        gsap.set(interstitialRef.current, { opacity: interIn * (1 - interOut), pointerEvents: 'none' })
-
-      } else {
-        // ── Phase 2: image shrinks full-width → centered (p 0.12 → 0.85) ──
-        const imgRaw = Math.max(0, Math.min(1, (p - 0.12) / 0.73))
+      if (!isMobile) {
+        // ── Phase 2: image shrinks full-width → centered (p 0.05 → 0.90) ──
+        const imgRaw = Math.max(0, Math.min(1, (p - 0.05) / 0.85))
         const imgP   = easeInOut(imgRaw)
 
         const startW  = vw
@@ -153,16 +202,11 @@ export default function PublicationsFooterSection() {
         if (imageOverlayRef.current) {
           gsap.set(imageOverlayRef.current, { opacity: 1 - imgP })
         }
-
-        // ── Interstitial: fade in after pub, fade out before footer text ──
-        const interIn  = Math.max(0, Math.min(1, (p - 0.25) / 0.15))
-        const interOut = Math.max(0, Math.min(1, (p - 0.54) / 0.14))
-        gsap.set(interstitialRef.current, { opacity: interIn * (1 - interOut), pointerEvents: 'none' })
       }
 
       // ── Footer text fades in ──────────────────────────────
-      const footerStart = isMobile ? 0.72 : 0.75
-      const footerRange = isMobile ? 0.20 : 0.25
+      const footerStart = 0.60
+      const footerRange = 0.35
       const footerFade = Math.max(0, Math.min(1, (p - footerStart) / footerRange))
       gsap.set(footerContentRef.current, { opacity: footerFade, pointerEvents: footerFade > 0.05 ? 'auto' : 'none' })
     }
@@ -253,43 +297,7 @@ export default function PublicationsFooterSection() {
           </div>
         </div>
 
-        {/* ── Image-only interstitial (step 2) ── */}
-        <div ref={interstitialRef} className={styles.interstitial} aria-hidden>
 
-          <div className={styles.interstitialLeft}>
-            <div className={styles.interStat}>
-              <span className={styles.interLabel}>{content.interstitial.availabilityLabel}</span>
-              <span className={styles.interBig}>{profile.location.availability}</span>
-            </div>
-            <div className={styles.interDividerH} />
-            <div className={styles.interStat}>
-              <span className={styles.interLabel}>{content.interstitial.basedInLabel}</span>
-              <span className={styles.interBig}>{profile.location.based}</span>
-            </div>
-          </div>
-
-          <div className={styles.interstitialRight}>
-            {profile.stats.map((stat, i) => (
-              <Fragment key={stat.label}>
-                {i > 0 && <div className={styles.interDividerV} />}
-                <div className={styles.interNum}>
-                  <span className={styles.interCount}>{stat.value}</span>
-                  <span className={styles.interNumLabel}>
-                    {(content.interstitial.statLabels[i] ?? stat.label).split('\n').map((line, j) => (
-                      <Fragment key={j}>{line}{j === 0 && <br />}</Fragment>
-                    ))}
-                  </span>
-                </div>
-              </Fragment>
-            ))}
-          </div>
-
-          <div className={styles.interstitialBottom}>
-            <span className={styles.interScrollText}>Continue</span>
-            <span className={styles.interScrollLine} />
-          </div>
-
-        </div>
 
         {/* ── Radial vignette (footer phase) ── */}
         <div className={styles.vignetteOverlay} aria-hidden />
@@ -309,10 +317,8 @@ export default function PublicationsFooterSection() {
               <span className={styles.mobileNameGhost}>{profile.name.last.toUpperCase()}</span>
             </h2>
             <p className={styles.mobileDesc}>{profile.description}</p>
-            <div className={styles.mobileCtas}>
-              <a href={`mailto:${profile.email}`} className={styles.mobileTalkBtn}>
-                Let&apos;s talk <FiArrowUpRight />
-              </a>
+            <div className={styles.mobileFormWrap}>
+              {renderContactForm()}
             </div>
             <div className={styles.mobileSocialRow}>
               {HERO_SOCIAL_LABELS.map((label, i) => {
@@ -381,18 +387,8 @@ export default function PublicationsFooterSection() {
             <div className={styles.centerSpace} />
 
             <div ref={rightRef} className={styles.rightCol}>
-              <div className={styles.ctaBlock}>
-                <p className={styles.ctaEyebrow}>{content.footer.eyebrow}</p>
-                <p className={styles.ctaHeading}>
-                  {content.footer.ctaLines.map((line, i) => (
-                    <span key={i}>{line}<br /></span>
-                  ))}
-                  <span className={styles.ctaAccent}>{content.footer.ctaAccent}</span>
-                </p>
-                <a href={`mailto:${profile.email}`} className={styles.talkBtn}>
-                  Let&apos;s talk →
-                </a>
-              </div>
+              <h3 className={styles.formSectionTitle}>Get in touch</h3>
+              {renderContactForm()}
             </div>
 
           </div>
