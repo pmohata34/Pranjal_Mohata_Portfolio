@@ -5,7 +5,7 @@
     "full": "Pranjal Mohata"
   },
   "email": "pranjalmohata.work@gmail.com",
-  "web3formsKey": "YOUR_WEB3FORMS_ACCESS_KEY",
+  "web3formsKey": "331e9c71-c102-4768-b3e0-052a9ced2b4b",
   "tagline": "Building high-performance, responsive full-stack applications with modern web architectures.",
   "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cloud platforms. 9x AWS Certified.",
   "roles": {
@@ -116,32 +116,13 @@
   "projects": [
     {
       "id": 1,
-      "title": "Adamas CR Voting System",
-      "subtitle": "University-Deployed Voting Platform",
-      "type": "Web App",
-      "year": "2025",
-      "github": "https://github.com/pmohata34/Adamas-CR-Voting-System",
-      "live": "https://github.com/pmohata34/Adamas-CR-Voting-System",
-      "image": "/assets/project-artgenio.png",
-      "tech": [
-        "React",
-        "TypeScript",
-        "Firebase",
-        "TanStack Query",
-        "Recharts",
-        "Tailwind CSS"
-      ],
-      "desc": "Secure voting platform actively used by Adamas University students. Features email verification and one-vote-per-user enforcement with Firestore real-time sync, and an admin dashboard with Recharts live results."
-    },
-    {
-      "id": 2,
       "title": "DataScrape",
       "subtitle": "SaaS Web Scraping Platform",
       "type": "SaaS",
       "year": "2026",
       "github": "https://github.com/pmohata34/DataScrape",
-      "live": "https://github.com/pmohata34/DataScrape",
-      "image": "/assets/project-easyfolio.png",
+      "live": "https://data-scape-eight.vercel.app/",
+      "image": "/assets/DataScrape.png",
       "tech": [
         "React",
         "TypeScript",
@@ -154,14 +135,14 @@
       "desc": "SaaS-style web scraping application with user auth, per-user scrape history, and export pipeline. Built fully serverless with Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "LETHE",
       "subtitle": "Product Website with 3D Animation",
       "type": "Hackathon 1st Place",
       "year": "2025",
       "github": "https://github.com/pmohata34/LETHE",
-      "live": "https://github.com/pmohata34/LETHE",
-      "image": "/assets/project-artgenio.png",
+      "live": "https://lethe-0day.vercel.app/",
+      "image": "/assets/Lethe.png",
       "tech": [
         "Next.js",
         "TypeScript",
@@ -174,14 +155,33 @@
       "desc": "Product website for a cryptographic data-wiping SaaS featuring 3D scene rendering, GSAP ScrollTrigger animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
     },
     {
+      "id": 3,
+      "title": "RoomMates Connect",
+      "subtitle": "Full Stack Matching App",
+      "type": "MERN Stack",
+      "year": "2025",
+      "github": "https://github.com/pmohata34/RoomMatch",
+      "live": "https://room-match-six.vercel.app/",
+      "image": "/assets/RoomMates-Connect.png",
+      "tech": [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "JWT Auth",
+        "MongoDB"
+      ],
+      "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
+    },
+    {
       "id": 4,
       "title": "NeoLearn",
       "subtitle": "SSR Student Dashboard",
       "type": "Full Stack",
       "year": "2026",
-      "github": "https://github.com/pmohata34/NeoLearn",
-      "live": "https://github.com/pmohata34/NeoLearn",
-      "image": "/assets/project-easyfolio.png",
+      "github": "https://github.com/pmohata34/neolearn",
+      "live": "https://neolearn-phi.vercel.app/",
+      "image": "/assets/NeoLearn.png",
       "tech": [
         "Next.js",
         "Supabase",
@@ -192,22 +192,21 @@
     },
     {
       "id": 5,
-      "title": "RoomMates Connect",
-      "subtitle": "Full Stack Matching App",
-      "type": "MERN Stack",
+      "title": "Adamas CR Voting System",
+      "subtitle": "University-Deployed Voting Platform",
+      "type": "Web App",
       "year": "2025",
-      "github": "https://github.com/pmohata34/RoomMates-Connect",
-      "live": "https://github.com/pmohata34/RoomMates-Connect",
-      "image": "/assets/project-easyfolio.png",
+      "github": "https://github.com/pmohata34/Adamas-CR-Voting-System",
+      "image": "/assets/AdamasVoting.png",
       "tech": [
         "React",
-        "Vite",
-        "Node.js",
-        "Express.js",
-        "JWT Auth",
-        "MongoDB"
+        "TypeScript",
+        "Firebase",
+        "TanStack Query",
+        "Recharts",
+        "Tailwind CSS"
       ],
-      "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
+      "desc": "Secure voting platform actively used by Adamas University students. Features email verification and one-vote-per-user enforcement with Firestore real-time sync, and an admin dashboard with Recharts live results."
     }
   ],
   "publications": [
@@ -245,6 +244,10 @@
     }
   ],
   "socials": [
+    {
+      "label": "Email",
+      "href": "pranjalmohata.work@gmail.com"
+    },
     {
       "label": "GitHub",
       "href": "https://github.com/pmohata34"

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { gsap } from '@/lib/gsap'
-import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaMedium, FaInstagram, FaYoutube, FaEnvelope } from 'react-icons/fa'
 import profile from '@/data/profile.json'
 import styles from '@/styles/sections/AboutSection.module.css'
 import SkillsOrbit from '@/components/ui/SkillsOrbit'
@@ -20,7 +20,7 @@ const BIO_SEGMENTS = [
   { text: " roles.", highlight: false },
 ]
 
-const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube }
+const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube, Email: FaEnvelope }
 
 const SOCIALS = profile.socials.map(s => ({ Icon: ICON_MAP[s.label], href: s.href, label: s.label }))
 
@@ -110,18 +110,22 @@ export default function AboutSection() {
 
         {/* Social icons */}
         <div ref={socialsRef} className={styles.socials}>
-          {SOCIALS.map(({ Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className={styles.socialLink}
-            >
-              <Icon />
-            </a>
-          ))}
+          {SOCIALS.map(({ Icon, href, label }) => {
+            if (!Icon) return null
+            const isEmail = label === 'Email'
+            return (
+              <a
+                key={label}
+                href={isEmail ? `mailto:${href}` : href}
+                target={isEmail ? undefined : "_blank"}
+                rel={isEmail ? undefined : "noopener noreferrer"}
+                aria-label={label}
+                className={styles.socialLink}
+              >
+                <Icon />
+              </a>
+            )
+          })}
         </div>
       </div>
 

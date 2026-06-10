@@ -19,6 +19,7 @@ const SOCIAL_ICONS = {
   Medium:    <FaMedium    size={13} />,
   Instagram: <FaInstagram size={13} />,
   YouTube:   <FaYoutube   size={13} />,
+  Email:     <FaEnvelope  size={13} />,
 }
 
 const MOBILE_SOCIAL_ICONS = {
@@ -360,22 +361,25 @@ export default function PublicationsFooterSection() {
               <div className={styles.footerInfo}>
                 <p className={styles.footerDescription}>{profile.description}</p>
                 <div className={styles.footerLinks}>
-                  {profile.socials.slice(0, 4).map((s, i) => (
-                    <span key={s.label} className={styles.footerLinkWrap}>
-                      {i > 0 && <span className={styles.footerPipe}>|</span>}
-                      <a
-                        href={s.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.footerLink}
-                      >
-                        {SOCIAL_ICONS[s.label] && (
-                          <span className={styles.socialIcon}>{SOCIAL_ICONS[s.label]}</span>
-                        )}
-                        {s.label}
-                      </a>
-                    </span>
-                  ))}
+                  {profile.socials.slice(0, 4).map((s, i) => {
+                    const isEmail = s.label === 'Email'
+                    return (
+                      <span key={s.label} className={styles.footerLinkWrap}>
+                        {i > 0 && <span className={styles.footerPipe}>|</span>}
+                        <a
+                          href={isEmail ? `mailto:${s.href}` : s.href}
+                          target={isEmail ? undefined : "_blank"}
+                          rel={isEmail ? undefined : "noopener noreferrer"}
+                          className={styles.footerLink}
+                        >
+                          {SOCIAL_ICONS[s.label] && (
+                            <span className={styles.socialIcon}>{SOCIAL_ICONS[s.label]}</span>
+                          )}
+                          {s.label}
+                        </a>
+                      </span>
+                    )
+                  })}
                 </div>
                 <a href={`mailto:${profile.email}`} className={styles.footerMail}>
                   <FaEnvelope size={12} />
