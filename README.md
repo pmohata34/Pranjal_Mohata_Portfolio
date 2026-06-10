@@ -1,4 +1,4 @@
-# 🪐 Cinematic Personal Portfolio
+# 🪐 Personal Portfolio
 
 A visually stunning, high-performance cinematic personal portfolio built with **Next.js 16 (App Router)**, **React 19**, **GSAP**, **Three.js**, and **CSS Modules**. Features interactive 3D particle systems, fluid scroll-driven animations, a magnetic custom cursor, and automatic brand assets synchronization.
 
