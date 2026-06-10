@@ -18,9 +18,18 @@
   "available": true,
   "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9x AWS Certified, and Postman API Expert. Seeking full-time Software Engineer and Full Stack Developer roles.",
   "stats": [
-    { "value": "2",  "label": "Internships" },
-    { "value": "5+", "label": "Projects Completed" },
-    { "value": "9x",   "label": "AWS Certified" }
+    {
+      "value": "2",
+      "label": "Internships"
+    },
+    {
+      "value": "5+",
+      "label": "Projects Completed"
+    },
+    {
+      "value": "9x",
+      "label": "AWS Certified"
+    }
   ],
   "skills": [
     "Full Stack Developer",
@@ -109,9 +118,18 @@
       "title": "Adamas CR Voting System",
       "subtitle": "University-Deployed Voting Platform",
       "type": "Web App",
-      "link": "https://github.com/pmohata34",
+      "year": "2025",
+      "github": "https://github.com/pmohata34/Adamas-CR-Voting-System",
+      "live": "https://github.com/pmohata34/Adamas-CR-Voting-System",
       "image": "/assets/project-artgenio.png",
-      "tech": ["React", "TypeScript", "Firebase", "TanStack Query", "Recharts", "Tailwind CSS"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Firebase",
+        "TanStack Query",
+        "Recharts",
+        "Tailwind CSS"
+      ],
       "desc": "Secure voting platform actively used by Adamas University students. Features email verification and one-vote-per-user enforcement with Firestore real-time sync, and an admin dashboard with Recharts live results."
     },
     {
@@ -119,9 +137,19 @@
       "title": "DataScrape",
       "subtitle": "SaaS Web Scraping Platform",
       "type": "SaaS",
-      "link": "https://github.com/pmohata34",
+      "year": "2026",
+      "github": "https://github.com/pmohata34/DataScrape",
+      "live": "https://github.com/pmohata34/DataScrape",
       "image": "/assets/project-easyfolio.png",
-      "tech": ["React", "TypeScript", "Supabase", "PostgreSQL", "Edge Functions", "Firecrawl", "Apify"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Edge Functions",
+        "Firecrawl",
+        "Apify"
+      ],
       "desc": "SaaS-style web scraping application with user auth, per-user scrape history, and export pipeline. Built fully serverless with Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
     },
     {
@@ -129,9 +157,19 @@
       "title": "LETHE",
       "subtitle": "Product Website with 3D Animation",
       "type": "Hackathon 1st Place",
-      "link": "https://github.com/pmohata34",
+      "year": "2025",
+      "github": "https://github.com/pmohata34/LETHE",
+      "live": "https://github.com/pmohata34/LETHE",
       "image": "/assets/project-artgenio.png",
-      "tech": ["Next.js", "TypeScript", "GSAP", "Three.js", "Lenis", "Framer Motion", "Tailwind CSS"],
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "GSAP",
+        "Three.js",
+        "Lenis",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
       "desc": "Product website for a cryptographic data-wiping SaaS featuring 3D scene rendering, GSAP ScrollTrigger animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
     },
     {
@@ -139,9 +177,16 @@
       "title": "NeoLearn",
       "subtitle": "SSR Student Dashboard",
       "type": "Full Stack",
-      "link": "https://github.com/pmohata34",
+      "year": "2026",
+      "github": "https://github.com/pmohata34/NeoLearn",
+      "live": "https://github.com/pmohata34/NeoLearn",
       "image": "/assets/project-easyfolio.png",
-      "tech": ["Next.js", "Supabase", "Framer Motion", "Tailwind CSS"],
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
       "desc": "Dark student dashboard featuring Supabase server-side rendering (SSR), course progress tracking, and mobile-first responsive components built with Next.js App Router and animated with Framer Motion."
     },
     {
@@ -149,9 +194,18 @@
       "title": "RoomMates Connect",
       "subtitle": "Full Stack Matching App",
       "type": "MERN Stack",
-      "link": "https://github.com/pmohata34",
+      "year": "2025",
+      "github": "https://github.com/pmohata34/RoomMates-Connect",
+      "live": "https://github.com/pmohata34/RoomMates-Connect",
       "image": "/assets/project-easyfolio.png",
-      "tech": ["React", "Vite", "Node.js", "Express.js", "JWT Auth", "MongoDB"],
+      "tech": [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "JWT Auth",
+        "MongoDB"
+      ],
       "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
     }
   ],
@@ -190,7 +244,13 @@
     }
   ],
   "socials": [
-    { "label": "GitHub",    "href": "https://github.com/pmohata34" },
-    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/pranjal-mohata" }
+    {
+      "label": "GitHub",
+      "href": "https://github.com/pmohata34"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/pranjal-mohata"
+    }
   ]
 }
