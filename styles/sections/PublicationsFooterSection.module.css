@@ -205,6 +205,7 @@
   font-family: var(--font-geist-mono), monospace;
   line-height: 1;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .itemBody {
