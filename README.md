@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-  <a href="https://pranjal-mohata-portfolio.vercel.app">
+  <a href="https://www.pranjalmohata.in">
     <img src="https://img.shields.io/badge/demo-live-brightgreen.svg?style=for-the-badge&logo=vercel&color=d946ef" alt="Live Demo" />
   </a>
   <a href="https://github.com/pmohata34/Pranjal_Mohata_Portfolio">
