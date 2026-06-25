@@ -17,14 +17,14 @@
     "availability": "Remote / On-site"
   },
   "available": true,
-  "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9+ AWS Certified, and Postman API Expert. Seeking full-time Software Engineer and Full Stack Developer roles.",
+  "bio": "Full Stack Developer and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, 9+ AWS Certified, Postman API Expert, and 2 internship experiences. Built and deployed a personal portfolio using Next.js with animated UI, serving as a live showcase of all project work. Seeking full-time Software Engineer and Full Stack Developer roles. Open to remote positions.",
   "stats": [
     {
       "value": "2",
       "label": "Internships"
     },
     {
-      "value": "5+",
+      "value": "6+",
       "label": "Projects Completed"
     },
     {
@@ -52,6 +52,45 @@
   "experience": [
     {
       "id": 1,
+      "role": "Dev Space Research Intern",
+      "company": "Bharat Space Education Research Centre",
+      "companyShort": "BHARAT SPACE",
+      "type": "Research",
+      "location": "Remote",
+      "period": "June 2026",
+      "periodEnd": "Present",
+      "bullets": [
+        "Contributing to space technology research and development initiatives as part of the Dev Space team."
+      ],
+      "desc": "Contributing to space technology research and development initiatives as part of the Dev Space team.",
+      "tech": [
+        "Space Tech",
+        "R&D",
+        "Collaboration"
+      ]
+    },
+    {
+      "id": 2,
+      "role": "Research Intern",
+      "company": "IEEE SMC Student Branch Chapter, KGEC",
+      "companyShort": "IEEE SMC KGEC",
+      "type": "Research",
+      "location": "Remote",
+      "period": "May 2026",
+      "periodEnd": "Present",
+      "bullets": [
+        "Conducting research under the IEEE Systems, Man, and Cybernetics student branch chapter.",
+        "Collaborating with academic peers on technical research projects and publications."
+      ],
+      "desc": "Conducting research under the IEEE Systems, Man, and Cybernetics student branch chapter and collaborating with academic peers on technical research projects.",
+      "tech": [
+        "Systems & Cybernetics",
+        "Research",
+        "Collaboration"
+      ]
+    },
+    {
+      "id": 3,
       "role": "Web Development Intern",
       "company": "Intern Certify",
       "companyShort": "INTERN CERTIFY",
@@ -74,7 +113,26 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
+      "role": "Research Analyst",
+      "company": "Insightify Research",
+      "companyShort": "INSIGHTIFY",
+      "type": "Contract",
+      "location": "Remote",
+      "period": "Aug 2024",
+      "periodEnd": "Jan 2025",
+      "bullets": [
+        "Conducted structured qualitative research and B2B lead generation, compiling actionable market insights for client growth strategies over 6 months."
+      ],
+      "desc": "Conducted market research and B2B lead generation to build data-driven client growth strategies.",
+      "tech": [
+        "Qualitative Research",
+        "Lead Generation",
+        "B2B Insights"
+      ]
+    },
+    {
+      "id": 5,
       "role": "Web Development Intern",
       "company": "CodSoft",
       "companyShort": "CODSOFT",
@@ -92,30 +150,29 @@
         "CSS3",
         "JavaScript"
       ]
-    },
-    {
-      "id": 3,
-      "role": "Research Analyst",
-      "company": "Insightify Research",
-      "companyShort": "INSIGHTIFY",
-      "type": "Contract",
-      "location": "Remote",
-      "period": "Aug 2024",
-      "periodEnd": "Jan 2025",
-      "bullets": [
-        "Conducted structured qualitative research and B2B lead generation, compiling actionable market insights for client growth strategies over 6 months."
-      ],
-      "desc": "Conducted market research and B2B lead generation to build data-driven client growth strategies.",
-      "tech": [
-        "Qualitative Research",
-        "Lead Generation",
-        "B2B Insights"
-      ]
     }
   ],
   "projects": [
     {
       "id": 1,
+      "title": "Personal Portfolio",
+      "subtitle": "Interactive Developer Showreel",
+      "type": "Portfolio",
+      "year": "2026",
+      "github": "https://github.com/pmohata34/Pranjal_Mohata_Portfolio",
+      "live": "https://www.pranjalmohata.in",
+      "image": "/assets/Portfolio.png",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "GSAP",
+        "Framer Motion",
+        "Tailwind CSS"
+      ],
+      "desc": "Designed and built a production-deployed personal portfolio using Next.js App Router and TypeScript, featuring a cinematic video loader, animated hero section, scroll-driven transitions with GSAP, and smooth page motion with Framer Motion."
+    },
+    {
+      "id": 2,
       "title": "DataScrape",
       "subtitle": "SaaS Web Scraping Platform",
       "type": "SaaS",
@@ -135,7 +192,7 @@
       "desc": "SaaS-style web scraping application with user auth, per-user scrape history, and export pipeline. Built fully serverless with Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "LETHE",
       "subtitle": "Product Website with 3D Animation",
       "type": "Hackathon 1st Place",
@@ -155,7 +212,7 @@
       "desc": "Product website for a cryptographic data-wiping SaaS featuring 3D scene rendering, GSAP ScrollTrigger animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "RoomMates Connect",
       "subtitle": "Full Stack Matching App",
       "type": "MERN Stack",
@@ -174,7 +231,7 @@
       "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "NeoLearn",
       "subtitle": "SSR Student Dashboard",
       "type": "Full Stack",
@@ -191,7 +248,7 @@
       "desc": "Dark student dashboard featuring Supabase server-side rendering (SSR), course progress tracking, and mobile-first responsive components built with Next.js App Router and animated with Framer Motion."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Adamas CR Voting System",
       "subtitle": "University-Deployed Voting Platform",
       "type": "Web App",
@@ -220,7 +277,7 @@
     },
     {
       "id": 2,
-      "title": "AWS Academy Graduate — 9+ certifications",
+      "title": "AWS Academy Graduate — 9 Certifications",
       "platform": "Amazon Web Services",
       "year": "2026",
       "link": "https://github.com/pmohata34",
@@ -236,11 +293,27 @@
     },
     {
       "id": 4,
-      "title": "IBM TechXchange AI & Automation Hackathon",
+      "title": "IBM TechXchange Dev Day AI & Automation Hackathon",
       "platform": "IBM",
       "year": "2025",
       "link": "https://github.com/pmohata34",
       "desc": "Participated in the IBM TechXchange Dev Day hackathon, focusing on building applications with enterprise AI APIs and automation platforms."
+    },
+    {
+      "id": 5,
+      "title": "Google Developer Group (GDG) — Web3 & Blockchain Track",
+      "platform": "Google Developer Groups",
+      "year": "2025",
+      "link": "https://github.com/pmohata34",
+      "desc": "Active member participating in Web3 and Blockchain track events and community workshops."
+    },
+    {
+      "id": 6,
+      "title": "Smart India Hackathon Participant",
+      "platform": "Ministry of Education, Govt. of India",
+      "year": "2025",
+      "link": "https://github.com/pmohata34",
+      "desc": "Participated in the national-level Smart India Hackathon, collaborating on solving real-world problem statements."
     }
   ],
   "socials": [

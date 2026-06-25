@@ -15,9 +15,9 @@ const BIO_SEGMENTS = [
   { text: "Full Stack Developer", highlight: true },
   { text: " and final-year B.Tech Computer Science student at Adamas University, Kolkata (2027), with hands-on experience building and deploying production-grade web applications. Proficient in React, Next.js, TypeScript, Node.js, Supabase, Firebase, and PostgreSQL. 1st Place winner at Internal Hackathon 2025, ", highlight: false },
   { text: "9+ AWS Certified", highlight: true },
-  { text: ", and Postman API Expert. Seeking full-time Software Engineer and ", highlight: false },
+  { text: ", Postman API Expert, and 2 internship experiences. Built and deployed a personal portfolio using Next.js with animated UI, serving as a live showcase of all project work. Seeking full-time Software Engineer and ", highlight: false },
   { text: "Full Stack Developer", highlight: true },
-  { text: " roles.", highlight: false },
+  { text: " roles. Open to remote positions.", highlight: false },
 ]
 
 const ICON_MAP = { GitHub: FaGithub, LinkedIn: FaLinkedinIn, Medium: FaMedium, Instagram: FaInstagram, YouTube: FaYoutube, Email: FaEnvelope }
