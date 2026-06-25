@@ -130,26 +130,6 @@
         "Lead Generation",
         "B2B Insights"
       ]
-    },
-    {
-      "id": 5,
-      "role": "Web Development Intern",
-      "company": "CodSoft",
-      "companyShort": "CODSOFT",
-      "type": "Internship",
-      "location": "Remote",
-      "period": "Jul 2024",
-      "periodEnd": "Aug 2024",
-      "bullets": [
-        "Built and shipped 3 core web application modules using HTML5, CSS3, and JavaScript within tight 2-month sprint cycles.",
-        "Implemented responsive design patterns ensuring consistent UI rendering across Chrome, Firefox, Safari, and Edge browsers."
-      ],
-      "desc": "Built core web modules under 2-month cycles. Focused on cross-browser compatibility and layout responsiveness.",
-      "tech": [
-        "HTML5",
-        "CSS3",
-        "JavaScript"
-      ]
     }
   ],
   "projects": [
