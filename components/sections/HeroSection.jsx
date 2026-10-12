@@ -168,7 +168,7 @@ export default function HeroSection() {
 
         {/* Stats Row */}
         <div ref={statsRef} className={styles.stats}>
-          {[...profile.stats.slice(0, 2), content.hero.specialistStat].map(s => (
+          {profile.stats.map(s => (
             <div key={s.label} className={styles.statCard}>
               <span className={styles.statValue}>{s.value}</span>
               <span className={styles.statLabel}>{s.label}</span>

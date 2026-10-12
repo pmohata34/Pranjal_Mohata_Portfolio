@@ -7,7 +7,7 @@
   "email": "pranjalmohata.work@gmail.com",
   "web3formsKey": "331e9c71-c102-4768-b3e0-052a9ced2b4b",
   "tagline": "Building high-performance, responsive full-stack applications with modern web architectures.",
-  "description": "Full Stack Developer specializing in React, Next.js, Node.js, and cloud platforms. 9+ AWS Certified.",
+  "description": "Full Stack Developer specializing in React, Next.js, TypeScript, Python, and Cloud. 9+ AWS Certified.",
   "roles": {
     "short": "Full Stack Developer",
     "detailed": "Full-Stack Developer · Web Engineer · 9+ AWS Certified"
@@ -38,8 +38,7 @@
     "Next.js",
     "TypeScript",
     "Node.js",
-    "Express.js",
-    "MongoDB",
+    "Python",
     "PostgreSQL",
     "Supabase",
     "Firebase",
@@ -47,50 +46,111 @@
     "Tailwind CSS",
     "GSAP",
     "Three.js",
-    "Postman API"
+    "Machine Learning",
+    "Postman API",
+    "REST APIs"
+  ],
+  "technicalSkills": {
+    "frontend": [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "GSAP",
+      "Three.js",
+      "Radix UI",
+      "HTML5",
+      "CSS3",
+      "Vite",
+      "Recharts"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "Python"
+    ],
+    "databases": [
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Supabase",
+      "Firebase Firestore"
+    ],
+    "cloudDevOps": [
+      "AWS (9x Certified)",
+      "Supabase Edge Functions",
+      "Serverless Architecture",
+      "Vercel",
+      "Git",
+      "GitHub"
+    ],
+    "toolsMethods": [
+      "Postman (API Expert)",
+      "Figma",
+      "TanStack Query",
+      "Agile/Scrum",
+      "Responsive Web Design",
+      "OOP",
+      "DSA",
+      "Debugging"
+    ],
+    "specialized": [
+      "Web Scraping",
+      "Data Extraction",
+      "Firecrawl",
+      "Apify",
+      "SaaS Architecture",
+      "Real-Time Applications",
+      "Machine Learning",
+      "Computer Vision"
+    ]
+  },
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor of Technology (B.Tech)",
+      "field": "Computer Science Engineering",
+      "institution": "Adamas University, Kolkata",
+      "period": "Aug 2023 – May 2027"
+    },
+    {
+      "id": 2,
+      "degree": "Higher Secondary Certificate",
+      "field": "Science Stream",
+      "institution": "Ashok Hall Girls’ Higher Secondary School",
+      "period": "Apr 2021 – Mar 2023"
+    }
   ],
   "experience": [
     {
       "id": 1,
-      "role": "Dev Space Research Intern",
-      "company": "Bharat Space Education Research Centre",
-      "companyShort": "BHARAT SPACE",
-      "type": "Research",
-      "location": "Remote",
-      "period": "June 2026",
-      "periodEnd": "Present",
-      "bullets": [
-        "Contributing to space technology research and development initiatives as part of the Dev Space team."
-      ],
-      "desc": "Contributing to space technology research and development initiatives as part of the Dev Space team.",
-      "tech": [
-        "Space Tech",
-        "R&D",
-        "Collaboration"
-      ]
-    },
-    {
-      "id": 2,
       "role": "Research Intern",
-      "company": "IEEE SMC Student Branch Chapter, KGEC",
+      "company": "IEEE SMC Student Branch Chapter, Kalyani Government Engineering College (KGEC)",
       "companyShort": "IEEE SMC KGEC",
       "type": "Research",
       "location": "Remote",
       "period": "May 2026",
-      "periodEnd": "Present",
+      "periodEnd": "Sep 2026",
       "bullets": [
-        "Conducting research under the IEEE Systems, Man, and Cybernetics student branch chapter.",
-        "Collaborating with academic peers on technical research projects and publications."
+        "Built TempestGuard, a thunderstorm prediction system using virtual sensor nodes, live weather API data, and a Random Forest classifier deployed via a Flask + Leaflet.js dashboard.",
+        "Developed PainGuard AI, a multimodal safety estimation system combining simulated wristband vitals, computer vision, and speech analysis to classify user state in real time using ML classifiers."
       ],
-      "desc": "Conducting research under the IEEE Systems, Man, and Cybernetics student branch chapter and collaborating with academic peers on technical research projects.",
+      "desc": "Built TempestGuard and PainGuard AI systems combining virtual sensor telemetry, computer vision, and machine learning classifiers.",
       "tech": [
-        "Systems & Cybernetics",
-        "Research",
-        "Collaboration"
+        "Python",
+        "Machine Learning",
+        "Scikit-learn",
+        "Flask",
+        "OpenCV",
+        "Leaflet.js"
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "role": "Web Development Intern",
       "company": "Intern Certify",
       "companyShort": "INTERN CERTIFY",
@@ -103,7 +163,7 @@
         "Contributed to production builds with cross-browser compatibility testing and mobile-responsive design implementation.",
         "Collaborated in an Agile development environment, participating in sprint planning and code review processes."
       ],
-      "desc": "Delivered web application features using React and vanilla JS. Implemented responsive designs and worked in an Agile environment.",
+      "desc": "Delivered web application features using React and JavaScript within an Agile development environment.",
       "tech": [
         "React.js",
         "JavaScript",
@@ -113,29 +173,50 @@
       ]
     },
     {
-      "id": 4,
+      "id": 3,
       "role": "Research Analyst",
       "company": "Insightify Research",
       "companyShort": "INSIGHTIFY",
-      "type": "Contract",
+      "type": "Research",
       "location": "Remote",
       "period": "Aug 2024",
       "periodEnd": "Jan 2025",
       "bullets": [
         "Conducted structured qualitative research and B2B lead generation, compiling actionable market insights for client growth strategies over 6 months."
       ],
-      "desc": "Conducted market research and B2B lead generation to build data-driven client growth strategies.",
+      "desc": "Conducted structured qualitative research and B2B lead generation, compiling actionable market insights for client growth strategies.",
       "tech": [
         "Qualitative Research",
-        "Lead Generation",
-        "B2B Insights"
+        "B2B Lead Generation",
+        "Market Analysis"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "Web Development Intern",
+      "company": "CodSoft",
+      "companyShort": "CODSOFT",
+      "type": "Internship",
+      "location": "Remote",
+      "period": "Jul 2024",
+      "periodEnd": "Aug 2024",
+      "bullets": [
+        "Built and shipped 3 core web application modules using HTML5, CSS3, and JavaScript within tight 2-month sprint cycles.",
+        "Implemented responsive design patterns ensuring consistent UI rendering across Chrome, Firefox, Safari, and Edge browsers."
+      ],
+      "desc": "Built and shipped 3 core web application modules using HTML5, CSS3, and JavaScript within tight 2-month sprint cycles.",
+      "tech": [
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Responsive Design"
       ]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Personal Portfolio",
+      "title": "Personal Portfolio Website",
       "subtitle": "Interactive Developer Showreel",
       "type": "Portfolio",
       "year": "2026",
@@ -169,7 +250,7 @@
         "Firecrawl",
         "Apify"
       ],
-      "desc": "SaaS-style web scraping application with user auth, per-user scrape history, and export pipeline. Built fully serverless with Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
+      "desc": "Architected a SaaS-style data extraction application with user authentication, per-user scrape history, and JSON/CSV export pipeline — fully serverless using Supabase Edge Functions, Firecrawl, and Apify APIs, secured via PostgreSQL RLS."
     },
     {
       "id": 3,
@@ -189,51 +270,54 @@
         "Framer Motion",
         "Tailwind CSS"
       ],
-      "desc": "Product website for a cryptographic data-wiping SaaS featuring 3D scene rendering, GSAP ScrollTrigger animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
+      "desc": "Built a complete product website for a cryptographic data-wiping SaaS featuring Three.js 3D scene rendering, GSAP ScrollTrigger cinematic animations, and Lenis smooth scroll. Won 1st Place at Adamas University Internal Hackathon 2025."
     },
     {
       "id": 4,
-      "title": "RoomMates Connect",
-      "subtitle": "Full Stack Matching App",
-      "type": "MERN Stack",
-      "year": "2025",
-      "github": "https://github.com/pmohata34/RoomMatch",
-      "live": "https://room-match-six.vercel.app/",
-      "image": "/assets/RoomMates-Connect.png",
+      "title": "TempestGuard",
+      "subtitle": "Thunderstorm Prediction System",
+      "type": "Machine Learning",
+      "year": "2026",
+      "github": "https://github.com/pmohata34/TempestGuard",
+      "live": null,
+      "image": "/assets/TempestGuard.png",
       "tech": [
-        "React",
-        "Vite",
-        "Node.js",
-        "Express.js",
-        "JWT Auth",
-        "MongoDB"
+        "Python",
+        "Flask",
+        "Scikit-learn",
+        "Pandas",
+        "Leaflet.js",
+        "OpenWeatherMap API"
       ],
-      "desc": "MERN stack matching app featuring lifestyle preference surveys and matching algorithms. Designed and built a custom Node/Express REST API and integrated a MongoDB database via Mongoose."
+      "desc": "Built a software-defined thunderstorm prediction system using virtual sensor nodes across 5 Kolkata locations, live OpenWeatherMap API data, temporal delta feature engineering, Random Forest classifier, and an interactive Flask + Leaflet.js dashboard."
     },
     {
       "id": 5,
-      "title": "NeoLearn",
-      "subtitle": "SSR Student Dashboard",
-      "type": "Full Stack",
+      "title": "PainGuard AI",
+      "subtitle": "Multimodal Safety Estimation System",
+      "type": "Machine Learning / CV",
       "year": "2026",
-      "github": "https://github.com/pmohata34/neolearn",
-      "live": "https://neolearn-phi.vercel.app/",
-      "image": "/assets/NeoLearn.png",
+      "github": "https://github.com/pmohata34/PainGuard-AI",
+      "live": null,
+      "image": "/assets/PainGuard.png",
       "tech": [
-        "Next.js",
-        "Supabase",
-        "Framer Motion",
-        "Tailwind CSS"
+        "Python",
+        "OpenCV",
+        "Scikit-learn",
+        "Tkinter",
+        "SpeechRecognition",
+        "Pandas"
       ],
-      "desc": "Dark student dashboard featuring Supabase server-side rendering (SSR), course progress tracking, and mobile-first responsive components built with Next.js App Router and animated with Framer Motion."
+      "desc": "Developed a wearable-assisted safety estimation system combining simulated wristband vitals, camera-based face/eye detection, and speech analysis with Random Forest and SVM classifiers to classify user state in real time."
     },
     {
       "id": 6,
       "title": "Adamas CR Voting System",
-      "subtitle": "University-Deployed Voting Platform",
+      "subtitle": "University-Deployed Platform",
       "type": "Web App",
       "year": "2025",
       "github": "https://github.com/pmohata34/Adamas-CR-Voting-System",
+      "live": null,
       "image": "/assets/AdamasVoting.png",
       "tech": [
         "React",
@@ -241,9 +325,10 @@
         "Firebase",
         "TanStack Query",
         "Recharts",
+        "Radix UI",
         "Tailwind CSS"
       ],
-      "desc": "Secure voting platform actively used by Adamas University students. Features email verification and one-vote-per-user enforcement with Firestore real-time sync, and an admin dashboard with Recharts live results."
+      "desc": "Built and deployed a secure class representative voting platform actively used by Adamas University students, featuring email verification and one-vote enforcement via Firebase Firestore real-time sync, and an admin dashboard with Recharts live results."
     }
   ],
   "publications": [
